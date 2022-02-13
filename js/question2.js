@@ -14,6 +14,8 @@ async function getApi() {
         // console.log(data);
     
         const games = data.results;
+
+        endpointContainer.innerHTML = "";
         
         for (let i = 0; i < games.length; i++) {
             // console.log(games[i])
