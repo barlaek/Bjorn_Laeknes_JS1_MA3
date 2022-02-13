@@ -31,7 +31,7 @@ async function getApi() {
         }
     } catch (error) {
         console.log(error);
-        endpointContainer.innerHTML = error
+        endpointContainer.innerHTML = displayError("Oh boy! A Monkey stole the API");
     }
 
 }
