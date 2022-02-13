@@ -17,20 +17,25 @@ const endpointContainer = document.querySelector(".endpoint");
 async function getApi() {
     const response = await fetch(rawgUrl);
 
-    const games = await response.json();
+    const data = await response.json();
 
-    console.log(games);
+    console.log(data);
 
-    const allGames = games.results;
+    const games = data.results;
 
-    for (let i = 0; i < allGames.length; i++) {
-        console.log(allGames[i])
+    for (let i = 0; i < games.length; i++) {
+        console.log(games[i])
 
         if (i === 8) {
             break;
         }
 
-        endpointContainer.innerHTML += `<div class="the_endpoint">${allGames[i].name}</div>`
+        endpointContainer.innerHTML += `<div class="the_endpoint">${games[i].name}
+
+        ${games[i].rating}
+
+        ${games[i].tags}
+        </div>`
     }
 
 }
