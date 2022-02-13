@@ -23,11 +23,10 @@ async function getApi() {
             }
     
             endpointContainer.innerHTML += 
-                `<div class="the_endpoint">${games[i].name}
-                
-                Rating: ${games[i].rating}
-    
-                Number of tags: ${games[i].tags.length}
+                `<div class="the_endpoint">
+                <h3>${games[i].name}</h3>
+                <p>Rating: ${games[i].rating}</p>
+                <p>Number of tags: ${games[i].tags.length}</p>
                 </div>`
         }
     } catch (error) {

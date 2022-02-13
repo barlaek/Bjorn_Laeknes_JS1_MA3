@@ -1,0 +1,11 @@
+.endpoint {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+
+.the_endpoint {
+    padding: 0.3em;
+}
